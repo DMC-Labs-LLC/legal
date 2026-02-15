@@ -1,5 +1,5 @@
 ---
-version: "2026-02-15c"
+version: "2026-02-15d"
 title: Privacy Policy
 last_updated: February 15, 2026
 ---
