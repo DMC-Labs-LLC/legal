@@ -1,5 +1,5 @@
 ---
-version: "2026-02-15b"
+version: "2026-02-15c"
 title: Terms of Service
 last_updated: February 15, 2026
 ---
