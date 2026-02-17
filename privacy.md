@@ -138,4 +138,4 @@ We may update this Privacy Policy from time to time. We will notify users of mat
 
 ## 12. Contact
 
-If you have questions about this Privacy Policy, our children's privacy practices, or wish to exercise your data rights, please contact us at privacy (at) dmclabs.one.
+If you have questions about this Privacy Policy, our children's privacy practices, or wish to exercise your data rights, please contact from www.dmclabs.one/contact
