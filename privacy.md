@@ -70,7 +70,7 @@ We comply with the Children's Online Privacy Protection Act (COPPA). Our practic
 
 **No Third-Party Sharing.** We do not share children's information with third parties. Bank account data accessed through third-party financial services (such as Teller) contains only the parent's financial information and is never associated with or accessible to children.
 
-**Operator Information.** DMC Labs, LLC is the operator of these services. For questions about our children's privacy practices, contact us at [privacy@dmclabs.one](mailto:privacy@dmclabs.one).
+**Operator Information.** DMC Labs, LLC is the operator of these services. For questions about our children's privacy practices, contact us at privacy (at) dmclabs.one.
 
 ## 5. Data Storage and Security
 
@@ -138,4 +138,4 @@ We may update this Privacy Policy from time to time. We will notify users of mat
 
 ## 12. Contact
 
-If you have questions about this Privacy Policy, our children's privacy practices, or wish to exercise your data rights, please contact us at [privacy@dmclabs.one](mailto:privacy@dmclabs.one).
+If you have questions about this Privacy Policy, our children's privacy practices, or wish to exercise your data rights, please contact us at privacy (at) dmclabs.one.
