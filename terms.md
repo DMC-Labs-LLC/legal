@@ -82,4 +82,4 @@ These terms shall be governed by and construed in accordance with the laws of th
 
 ## 15. Contact
 
-If you have questions about these Terms of Service, please contact us at contact (at) dmclabs.one.
+If you have questions about these Terms of Service, please reach us from www.dmclabs.one/contact
