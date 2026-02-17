@@ -1,12 +1,12 @@
 ---
-version: "2026-02-15"
+version: "2026-02-16"
 title: Terms of Service
-last_updated: February 15, 2026
+last_updated: February 16, 2026
 ---
 
 # Terms of Service
 
-Last updated: February 15, 2026
+Last updated: February 16, 2026
 
 ## 1. Agreement to Terms
 
@@ -29,34 +29,57 @@ You agree to:
 - Not attempt to interfere with or disrupt our services
 - Not attempt to gain unauthorized access to our systems
 
-## 5. Financial Data
+## 5. Parental Consent and Children's Features
 
-Certain applications may allow you to upload or connect financial data. You acknowledge that you are solely responsible for the accuracy of any financial information you provide. DMC Labs does not provide financial advice and is not a financial institution.
+Certain applications include features designed for use by families, including dashboards accessible by children. By using these features, you represent that:
 
-## 6. Intellectual Property
+- You are the parent or legal guardian of any child whose profile you create
+- You consent to the collection and use of your child's information as described in our [Privacy Policy](https://dmclabs.one/privacy)
+- You understand that you may revoke consent and request deletion of your child's data at any time
+
+We comply with the Children's Online Privacy Protection Act (COPPA). Before any child data is collected, we require verifiable parental consent through our email-based verification process. See our Privacy Policy for details.
+
+## 6. Device Authorization
+
+Access to child dashboards is controlled through device authorization. You are responsible for approving or denying device access requests. We recommend reviewing authorized devices periodically and revoking access for any devices you do not recognize.
+
+## 7. Financial Data
+
+Certain applications may allow you to upload financial transaction data or connect financial accounts through third-party services. You acknowledge that:
+
+- You are solely responsible for the accuracy of any financial information you provide
+- DMC Labs does not provide financial advice and is not a financial institution
+- When connecting bank accounts through third-party providers, you are subject to their terms and privacy policies in addition to ours
+- Transaction descriptions are automatically scanned to redact sensitive information such as account numbers, but you should review uploaded data for accuracy
+
+## 8. Data Portability and Deletion
+
+You may export your data or delete your account at any time through our application settings. Account deletion is permanent and removes all associated data, including child profiles, transaction history, and device authorizations. See our Privacy Policy for details.
+
+## 9. Intellectual Property
 
 All content, features, and functionality of our services are owned by DMC Labs, LLC and are protected by applicable intellectual property laws. You may not copy, modify, or distribute our software without prior written consent.
 
-## 7. Limitation of Liability
+## 10. Limitation of Liability
 
 To the fullest extent permitted by law, DMC Labs, LLC shall not be liable for any indirect, incidental, special, consequential, or punitive damages arising from your use of our services. Our total liability shall not exceed the amount you have paid us in the twelve months preceding the claim.
 
-## 8. Disclaimer of Warranties
+## 11. Disclaimer of Warranties
 
 Our services are provided "as is" and "as available" without warranties of any kind, either express or implied, including but not limited to implied warranties of merchantability, fitness for a particular purpose, and non-infringement.
 
-## 9. Termination
+## 12. Termination
 
 We reserve the right to suspend or terminate your access to our services at any time, with or without cause. Upon termination, your right to use our services will immediately cease.
 
-## 10. Changes to Terms
+## 13. Changes to Terms
 
-We may update these terms from time to time. We will notify users of material changes by updating the "Last updated" date. Continued use of our services after changes constitutes acceptance of the revised terms.
+We may update these terms from time to time. We will notify users of material changes by updating the "Last updated" date and requiring re-acceptance within our applications. Continued use of our services after changes constitutes acceptance of the revised terms.
 
-## 11. Governing Law
+## 14. Governing Law
 
 These terms shall be governed by and construed in accordance with the laws of the State of Florida, without regard to its conflict of law provisions.
 
-## 12. Contact
+## 15. Contact
 
 If you have questions about these Terms of Service, please contact us at [contact@dmclabs.one](mailto:contact@dmclabs.one).
