@@ -50,9 +50,10 @@ description is sent to Microsoft Azure OpenAI to suggest a category
 label. The request includes only the (redacted) description and the
 list of candidate category names — no transaction amount, name,
 email, account number, or other identifier is attached. Azure OpenAI
-is configured to not retain or train on this content. You can see
-every AI labeling event for your account in the in-app history
-(`mizu_auto_label_events` records).
+is configured to not retain or train on this content. We log each AI
+labeling decision internally for reliability and auditing; you can
+request a record of the AI labeling events associated with your
+account by contacting us (see Section 9).
 
 ### 2.4 Child profile information (family applications)
 
@@ -151,14 +152,14 @@ Settings; this:
   subscriptions, and other application data immediately.
 - Removes your authentication record.
 
-After deletion we retain a single audit row — your email and the
-deletion timestamp — for up to 90 days for fraud-prevention and to
-honor any re-signup limits. No transaction data, labels, or other
-personal content is retained. COPPA consent audit records are
-retained as required by law in anonymized form (no child first name
-or device identifier).
+After deletion we retain a minimal deletion record — your email and
+the deletion timestamp — as a record that the deletion occurred (for
+fraud-prevention and to honor any re-signup limits). No transaction
+data, labels, or other personal content is retained. COPPA consent
+audit records are retained as required by law in anonymized form (no
+child first name or device identifier).
 
-If you would like us to delete data sooner than 90 days, contact
+If you would like us to delete this minimal record as well, contact
 us — see Section 9.
 
 ## 7. Your Rights

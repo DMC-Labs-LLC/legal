@@ -113,9 +113,9 @@ You acknowledge that:
 You may export your data or delete your account at any time through
 the application's Settings. Account deletion is permanent and
 removes all transactions, labels, push subscriptions, and bank
-connections within seconds. We retain a small audit record (your
-email and the deletion timestamp) for up to 90 days for
-fraud-prevention purposes; see our Privacy Policy for details.
+connections within seconds. We retain a minimal deletion record (your
+email and the deletion timestamp) as a record that the deletion
+occurred, for fraud-prevention purposes; see our Privacy Policy for details.
 
 ## 10. Intellectual Property
 
