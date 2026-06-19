@@ -1,0 +1,21 @@
+# GitHub Pages (Jekyll) config for the DMC Labs legal site → legal.dmclabs.one
+#
+# Renders the existing terms.md / privacy.md (untouched markdown source-of-truth,
+# also fetched raw by each app's lib/legal.ts) into styled HTML. Purely additive:
+# no legal-document content lives here, only presentation.
+title: DMC Labs — Legal
+description: Terms of Service and Privacy Policy for DMC Labs, LLC applications.
+
+# Apply the shared layout to every page WITHOUT editing the source documents'
+# frontmatter (they only carry version/title/last_updated).
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: default
+
+# Keep repo meta out of the built site.
+exclude:
+  - README.md
+  - LICENSE
+  - .gitignore

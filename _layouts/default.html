@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>{% if page.title %}{{ page.title }} · {% endif %}DMC Labs</title>
+  <meta name="robots" content="index, follow" />
+  {% if page.description %}<meta name="description" content="{{ page.description }}" />{% endif %}
+  <style>
+    :root { color-scheme: light dark; }
+    * { box-sizing: border-box; }
+    html { -webkit-text-size-adjust: 100%; }
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.65;
+      color: #1c1d21;
+      background: #ffffff;
+    }
+    .wrap { max-width: 720px; margin: 0 auto; padding: 24px 22px 64px; }
+    header.site {
+      display: flex; align-items: center; justify-content: space-between;
+      gap: 16px; flex-wrap: wrap;
+      padding: 18px 22px; border-bottom: 1px solid #e6e8ee;
+      max-width: 720px; margin: 0 auto;
+    }
+    header.site .brand { font-weight: 700; letter-spacing: -0.01em; color: #1c1d21; text-decoration: none; }
+    header.site nav a { color: #4f6ad9; text-decoration: none; font-size: 0.95rem; margin-left: 16px; }
+    header.site nav a:hover { text-decoration: underline; }
+    article h1 { font-size: 1.9rem; line-height: 1.2; letter-spacing: -0.02em; margin: 0.2em 0 0.1em; }
+    article h2 { font-size: 1.25rem; margin: 1.8em 0 0.4em; padding-top: 0.4em; }
+    article h3 { font-size: 1.05rem; margin: 1.4em 0 0.3em; color: #2c2f36; }
+    article p, article li { font-size: 1.02rem; }
+    article a { color: #4f6ad9; }
+    article ul, article ol { padding-left: 1.3em; }
+    article code { background: #f3f4f8; padding: 0.1em 0.35em; border-radius: 4px; font-size: 0.92em; }
+    hr { border: none; border-top: 1px solid #e6e8ee; margin: 2em 0; }
+    footer.site { border-top: 1px solid #e6e8ee; margin-top: 2.5em; padding-top: 1.2em; color: #6b7080; font-size: 0.88rem; }
+    footer.site a { color: #6b7080; }
+    @media (prefers-color-scheme: dark) {
+      body { color: #e7e9ef; background: #0f1117; }
+      header.site, footer.site, hr { border-color: #262a35; }
+      header.site .brand { color: #e7e9ef; }
+      article h3 { color: #c8ccd6; }
+      article code { background: #1b1e27; }
+      header.site nav a, article a { color: #8aa0f2; }
+    }
+  </style>
+</head>
+<body>
+  <header class="site">
+    <a class="brand" href="/">DMC Labs</a>
+    <nav>
+      <a href="/terms">Terms</a>
+      <a href="/privacy">Privacy</a>
+    </nav>
+  </header>
+  <div class="wrap">
+    <article>
+      {{ content }}
+    </article>
+    <footer class="site">
+      {% if page.version %}<div>Version {{ page.version }}{% if page.last_updated %} · updated {{ page.last_updated }}{% endif %}</div>{% endif %}
+      <div>© DMC Labs, LLC · <a href="/terms">Terms</a> · <a href="/privacy">Privacy</a></div>
+    </footer>
+  </div>
+</body>
+</html>
