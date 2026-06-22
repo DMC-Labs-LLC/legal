@@ -1,12 +1,12 @@
 ---
-version: "2026-06-12"
+version: "2026-06-22"
 title: Privacy Policy
-last_updated: June 12, 2026
+last_updated: June 22, 2026
 ---
 
 # Privacy Policy
 
-Last updated: June 12, 2026
+Last updated: June 22, 2026
 
 ## 1. Who We Are
 
@@ -94,6 +94,18 @@ behavioral-analytics SDK in the app; the app collects no telemetry
 from your device. (On iOS, only Apple's own opt-in crash reporting
 may share crash data with us, which is handled entirely by Apple.)
 
+### 2.9 In-app purchases (tips)
+
+Some applications (such as Mizu) let you leave an optional in-app
+tip through Apple's In-App Purchase system. Apple processes the
+payment — we never receive your card or payment details. We keep a
+record that the tip occurred, linked to your account: the Apple
+transaction identifier, the product, the amount, and the date. We
+use this only to recognize supporters and to honor any future
+benefit we may choose to extend to early supporters (for example,
+continued access if a paid tier is ever introduced). This record is
+deleted when you delete your account.
+
 ## 3. How We Use Information
 
 We use the information described above to operate the application
@@ -149,7 +161,8 @@ Settings; this:
 
 - Revokes any active bank-aggregator connections (Teller).
 - Deletes all of your transactions, labels, categories, push
-  subscriptions, and other application data immediately.
+  subscriptions, in-app tip records, and other application data
+  immediately.
 - Removes your authentication record.
 
 After deletion we retain a minimal deletion record — your email and
