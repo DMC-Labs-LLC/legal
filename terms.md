@@ -112,7 +112,7 @@ details. The following terms apply:
 - Subscriptions are intended for reasonable personal use. We may
   limit the number of financial institutions or accounts linked
   under one subscription where usage is far outside typical
-  personal use (as a guideline, more than ten linked accounts).
+  personal use (as a guideline, more than six linked accounts).
 
 ## 8. Financial Data, Bank Connections, and Sharing
 
