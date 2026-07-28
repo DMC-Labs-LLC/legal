@@ -1,11 +1,14 @@
 ---
 title: Legal
-description: Terms of Service and Privacy Policy for DMC Labs, LLC applications.
+description: Legal documents for applications by DMC Labs, LLC.
 ---
 
 # Legal
 
-Legal documents for applications by **DMC Labs, LLC**.
+Legal documents for applications by **DMC Labs, LLC**. Each app has its own
+Terms and Privacy Policy.
 
-- [Terms of Service](/terms)
-- [Privacy Policy](/privacy)
+## Mizu
+
+- [Terms of Service](/mizu/terms)
+- [Privacy Policy](/mizu/privacy)
