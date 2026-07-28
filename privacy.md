@@ -1,12 +1,12 @@
 ---
-version: "2026-06-22"
+version: "2026-07-28"
 title: Privacy Policy
-last_updated: June 22, 2026
+last_updated: July 28, 2026
 ---
 
 # Privacy Policy
 
-Last updated: June 22, 2026
+Last updated: July 28, 2026
 
 ## 1. Who We Are
 
@@ -20,15 +20,16 @@ applications operated by DMC Labs and is referenced by each of them.
 ### 2.1 Account information
 
 When you sign in through a third-party authentication provider (such
-as Google or Apple), we receive your name and email address. We do
+as Apple or Google), we receive your name and email address. We do
 not see your password. If you use Sign in with Apple, you may choose
 Apple's Hide My Email option, in which case we receive only an
-Apple-provided relay email address.
+Apple-provided relay email address. Some applications also allow
+sign-in with an email address and password.
 
 ### 2.2 Financial transaction data
 
 For finance applications (such as Mizu), we receive transaction data
-from your bank through Teller, a regulated bank-data aggregator
+from your bank through Plaid, a regulated bank-data aggregator
 acting on your behalf. We receive: account name, account type, the
 last four digits of the account number, individual transaction date,
 amount, merchant description, and posting metadata. We do **not**
@@ -38,22 +39,19 @@ the ability to move money — the connection is read-only.
 Transaction descriptions are passed through an automatic redactor
 that strips account-number and card-number fragments, Social Security
 numbers, and similar sensitive sub-strings before the description is
-stored and before it is used for AI labeling (see Section 2.3). The
-redacted form is what you see in the app. (An account may be
-configured to retain the full, un-redacted description for the
+stored. The redacted form is what you see in the app. (An account may
+be configured to retain the full, un-redacted description for the
 account holder's own record-keeping; this is off by default.)
 
-### 2.3 Categorization data (AI labeling)
+### 2.3 Categorization data
 
-When you use the AI labeling feature (Mizu), the redacted transaction
-description is sent to Microsoft Azure OpenAI to suggest a category
-label. The request includes only the (redacted) description and the
-list of candidate category names — no transaction amount, name,
-email, account number, or other identifier is attached. Azure OpenAI
-is configured to not retain or train on this content. We log each AI
-labeling decision internally for reliability and auditing; you can
-request a record of the AI labeling events associated with your
-account by contacting us (see Section 9).
+Transactions arrive from the aggregator with a suggested category.
+The application presents that suggestion for you to confirm or
+correct, and stores your confirmations and corrections with your
+account so your data stays organized the way you want. No transaction
+data is sent to any third-party artificial-intelligence or
+categorization service; categorization uses the aggregator's own
+category together with your input.
 
 ### 2.4 Child profile information (family applications)
 
@@ -94,25 +92,29 @@ behavioral-analytics SDK in the app; the app collects no telemetry
 from your device. (On iOS, only Apple's own opt-in crash reporting
 may share crash data with us, which is handled entirely by Apple.)
 
-### 2.9 In-app purchases (tips)
+### 2.9 In-app purchases (subscriptions and tips)
 
-Some applications (such as Mizu) let you leave an optional in-app
-tip through Apple's In-App Purchase system. Apple processes the
-payment — we never receive your card or payment details. We keep a
-record that the tip occurred, linked to your account: the Apple
-transaction identifier, the product, the amount, and the date. We
-use this only to recognize supporters and to honor any future
-benefit we may choose to extend to early supporters (for example,
-continued access if a paid tier is ever introduced). This record is
-deleted when you delete your account.
+Some applications (such as Mizu) offer an auto-renewing subscription
+and/or an optional in-app tip through Apple's In-App Purchase system.
+Apple processes the payment — we never receive your card or payment
+details. For a subscription, we store a record linked to your account
+so we can tell whether your subscription is active: the Apple
+transaction identifier(s), the product, the store environment, and
+the expiration date. For a tip, we store the Apple transaction
+identifier, the product, the amount, and the date. We use these only
+to provide and recognize your purchase — for example, to unlock
+subscriber features, or to honor any benefit we choose to extend to
+supporters. These records are deleted when you delete your account.
 
 ## 3. How We Use Information
 
 We use the information described above to operate the application
 you signed up for: to display your financial data back to you, to
-suggest categorizations, to deliver notifications you have opted
-into, to enforce the COPPA consent record for child profiles, to
-respond to access requests, and to investigate abuse or fraud.
+help you confirm and correct categorizations, to deliver
+notifications you have opted into, to provide subscriber features to
+active subscribers, to enforce the COPPA consent record for child
+profiles, to respond to access requests, and to investigate abuse or
+fraud.
 
 We do not sell or rent personal information. We do not share
 personal information with third parties for their independent
@@ -128,10 +130,10 @@ agreement appropriate to the data we share with them.
 |---|---|---|
 | Google LLC | OAuth authentication (when you choose Google sign-in) | Name, email, profile photo URL |
 | Apple Inc. (Sign in with Apple) | Identity authentication (when you choose Apple sign-in) | Name and email, or an Apple private-relay email if you choose Hide My Email |
-| Supabase, Inc. | Database, authentication, scheduled jobs (Edge Functions) | All application data |
-| Netlify, Inc. | Web application hosting and request handling | Application requests and responses |
-| Teller Inc. | Bank-data aggregation (finance apps only) | Bank account identifiers; transaction stream is fetched on demand |
-| Microsoft Corporation (Azure OpenAI) | AI category labeling (finance apps only) | Redacted transaction description only — no amount, no identifiers |
+| Supabase, Inc. | Database, authentication, and scheduled server functions | All application data |
+| Netlify, Inc. | Web application hosting and request handling (web apps only) | Application requests and responses |
+| Plaid Inc. | Bank-data aggregation (finance apps only) | Bank account identifiers; the transaction stream is fetched on your behalf |
+| Apple Inc. (App Store / In-App Purchase) | Subscription and tip billing (when you purchase) | Apple transaction identifiers and subscription status — never your card or payment details |
 | Apple Inc. (Apple Push Notification service) | iOS native push notifications (when enabled) | Opaque APNs device token |
 | Your browser's Web Push service (e.g. Apple, Google, Mozilla) | Delivery of web push notifications to an installed web app (when enabled) | Opaque push endpoint, determined by your browser — not chosen by us |
 | Resend, Inc. | Transactional email (parental-consent verification only) | Email address |
@@ -159,9 +161,10 @@ We retain your data for as long as your account is active. You can
 permanently delete your account from within each application's
 Settings; this:
 
-- Revokes any active bank-aggregator connections (Teller).
-- Deletes all of your transactions, labels, categories, push
-  subscriptions, in-app tip records, and other application data
+- Disconnects any active bank-aggregator connections (Plaid),
+  including removing them at the aggregator.
+- Deletes all of your transactions, labels, categories, notification
+  tokens, in-app purchase records, and other application data
   immediately.
 - Removes your authentication record.
 
@@ -222,10 +225,10 @@ personal information we have collected about you:
 - **Right to limit use of sensitive personal information** —
   financial transaction data is considered sensitive personal
   information under CPRA. We use it only to provide the application
-  features you have signed up for (transaction labeling, exports,
-  retirement-modeling input). We do not use it to infer
-  characteristics about you for any other purpose, and you may
-  request that we further limit its use by emailing us.
+  features you have signed up for (transaction labeling and exports).
+  We do not use it to infer characteristics about you for any other
+  purpose, and you may request that we further limit its use by
+  emailing us.
 - **Right to non-discrimination** — exercising any of these rights
   will not result in denial of service, different prices, or a
   different level or quality of service.
@@ -255,7 +258,7 @@ comply with the Children's Online Privacy Protection Act (COPPA):
 - A parent can revoke consent at any time.
 
 Finance applications such as Mizu are not directed at children and
-are invite-only for adult users.
+are intended for adult users.
 
 ## 9. Contact
 
