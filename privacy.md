@@ -1,12 +1,12 @@
 ---
-version: "2026-06-22"
+version: "2026-07-28"
 title: Privacy Policy
-last_updated: June 22, 2026
+last_updated: July 28, 2026
 ---
 
 # Privacy Policy
 
-Last updated: June 22, 2026
+Last updated: July 28, 2026
 
 ## 1. Who We Are
 
@@ -19,41 +19,51 @@ applications operated by DMC Labs and is referenced by each of them.
 
 ### 2.1 Account information
 
-When you sign in through a third-party authentication provider (such
-as Google or Apple), we receive your name and email address. We do
-not see your password. If you use Sign in with Apple, you may choose
-Apple's Hide My Email option, in which case we receive only an
-Apple-provided relay email address.
+When you sign in with Sign in with Apple, we receive your name and
+email address from Apple. If you choose Apple's Hide My Email
+option, we receive only an Apple-provided relay email address. If
+you sign in with an email address and password, we store the email
+address and a secure hash of the password (we cannot read the
+password itself).
+
+Your DMC Labs account is one identity across DMC Labs applications:
+signing in to another DMC Labs application with the same account
+gives that application access to the same data described in this
+policy.
 
 ### 2.2 Financial transaction data
 
-For finance applications (such as Mizu), we receive transaction data
-from your bank through Teller, a regulated bank-data aggregator
-acting on your behalf. We receive: account name, account type, the
-last four digits of the account number, individual transaction date,
-amount, merchant description, and posting metadata. We do **not**
-receive your bank login credentials at any time. We do **not** have
-the ability to move money — the connection is read-only.
+For finance applications (such as Mizu), we receive account and
+transaction data from your bank through Plaid Inc. ("Plaid"), a
+regulated bank-data network acting on your behalf. We receive:
+account name, account type and subtype, the last four digits of the
+account number, and for each transaction the date, amount, currency,
+merchant name and description, merchant logo and website where
+available, Plaid's category enrichment, and pending/posted status.
+We do **not** receive your bank login credentials at any time —
+bank sign-in happens on Plaid's interface. We do **not** have the
+ability to move money; the connection is read-only.
 
-Transaction descriptions are passed through an automatic redactor
-that strips account-number and card-number fragments, Social Security
-numbers, and similar sensitive sub-strings before the description is
-stored and before it is used for AI labeling (see Section 2.3). The
-redacted form is what you see in the app. (An account may be
-configured to retain the full, un-redacted description for the
-account holder's own record-keeping; this is off by default.)
+Plaid's handling of your data is governed by Plaid's
+[End User Privacy Policy](https://plaid.com/legal/#end-user-privacy-policy).
 
-### 2.3 Categorization data (AI labeling)
+Bank connections are made at the level of your DMC Labs account,
+not an individual application: a financial institution you link is
+available to other DMC Labs applications you sign in to with the
+same account. Your financial data is made available to **another
+person's** account only if you explicitly grant that person access
+to a specific linked account; you can revoke such a grant at any
+time, and grants are recorded and auditable.
 
-When you use the AI labeling feature (Mizu), the redacted transaction
-description is sent to Microsoft Azure OpenAI to suggest a category
-label. The request includes only the (redacted) description and the
-list of candidate category names — no transaction amount, name,
-email, account number, or other identifier is attached. Azure OpenAI
-is configured to not retain or train on this content. We log each AI
-labeling decision internally for reliability and auditing; you can
-request a record of the AI labeling events associated with your
-account by contacting us (see Section 9).
+### 2.3 Categorization data
+
+Finance applications help you confirm or correct the category of
+each transaction. We store your review decisions and corrections,
+and per-merchant preferences learned from your corrections, in
+order to apply your choices to future transactions. Category
+suggestions come from our bank-data provider's enrichment and from
+your own corrections; no transaction content is sent to any
+third-party artificial-intelligence service.
 
 ### 2.4 Child profile information (family applications)
 
@@ -69,22 +79,14 @@ consent and the policy version they agreed to.
 
 ### 2.6 Push notifications
 
-If you enable push notifications (in supported applications), we
-store an opaque endpoint identifier and two cryptographic keys
-provided by your browser (Web Push) or an APNs device token
-(provided by iOS). These tokens identify your device for the
-purpose of delivering notifications and contain no personal data
-on their own. You can disable notifications at any time from
-within the app, and we automatically remove tokens that have been
-revoked by your browser or by iOS.
+If you enable push notifications, we store the APNs device token
+provided by iOS. This token identifies your device for the purpose
+of delivering notifications and contains no personal data on its
+own. You can disable notifications at any time from within the app
+or in iOS Settings, and we automatically remove tokens that have
+been revoked by iOS.
 
-### 2.7 Anonymous access requests
-
-If you submit a "Request Access" form for an invite-only application,
-we store the email address and name and message you provide, plus a
-hashed (one-way) version of your IP address for spam filtering.
-
-### 2.8 Basic usage and diagnostic data
+### 2.7 Basic usage and diagnostic data
 
 Our servers keep operational logs — application version, server-side
 error traces (no personal content), and authorization timestamps —
@@ -94,25 +96,26 @@ behavioral-analytics SDK in the app; the app collects no telemetry
 from your device. (On iOS, only Apple's own opt-in crash reporting
 may share crash data with us, which is handled entirely by Apple.)
 
-### 2.9 In-app purchases (tips)
+### 2.8 Purchases (subscriptions and tips)
 
-Some applications (such as Mizu) let you leave an optional in-app
-tip through Apple's In-App Purchase system. Apple processes the
-payment — we never receive your card or payment details. We keep a
-record that the tip occurred, linked to your account: the Apple
-transaction identifier, the product, the amount, and the date. We
-use this only to recognize supporters and to honor any future
-benefit we may choose to extend to early supporters (for example,
-continued access if a paid tier is ever introduced). This record is
-deleted when you delete your account.
+Payments are processed by Apple's In-App Purchase system — we never
+receive your card or payment details. For a subscription, we verify
+the purchase directly with Apple and store: the Apple transaction
+identifiers, the product purchased, and the subscription's current
+expiration date, linked to your account. We keep a history of these
+verification events for reliability and auditing. For an optional
+tip, we store the Apple transaction identifier, the product, the
+amount, and the date. These records are deleted when you delete
+your account.
 
 ## 3. How We Use Information
 
 We use the information described above to operate the application
 you signed up for: to display your financial data back to you, to
-suggest categorizations, to deliver notifications you have opted
-into, to enforce the COPPA consent record for child profiles, to
-respond to access requests, and to investigate abuse or fraud.
+apply your categorization choices, to determine your subscription
+status, to deliver notifications you have opted into, to enforce
+the COPPA consent record for child profiles, and to investigate
+abuse or fraud.
 
 We do not sell or rent personal information. We do not share
 personal information with third parties for their independent
@@ -126,15 +129,12 @@ agreement appropriate to the data we share with them.
 
 | Sub-processor | Purpose | Data shared |
 |---|---|---|
-| Google LLC | OAuth authentication (when you choose Google sign-in) | Name, email, profile photo URL |
-| Apple Inc. (Sign in with Apple) | Identity authentication (when you choose Apple sign-in) | Name and email, or an Apple private-relay email if you choose Hide My Email |
-| Supabase, Inc. | Database, authentication, scheduled jobs (Edge Functions) | All application data |
-| Netlify, Inc. | Web application hosting and request handling | Application requests and responses |
-| Teller Inc. | Bank-data aggregation (finance apps only) | Bank account identifiers; transaction stream is fetched on demand |
-| Microsoft Corporation (Azure OpenAI) | AI category labeling (finance apps only) | Redacted transaction description only — no amount, no identifiers |
-| Apple Inc. (Apple Push Notification service) | iOS native push notifications (when enabled) | Opaque APNs device token |
-| Your browser's Web Push service (e.g. Apple, Google, Mozilla) | Delivery of web push notifications to an installed web app (when enabled) | Opaque push endpoint, determined by your browser — not chosen by us |
-| Resend, Inc. | Transactional email (parental-consent verification only) | Email address |
+| Apple Inc. (Sign in with Apple) | Identity authentication | Name and email, or an Apple private-relay email if you choose Hide My Email |
+| Apple Inc. (App Store / In-App Purchase) | Subscription and tip payment processing and verification | Purchase transaction identifiers |
+| Apple Inc. (Apple Push Notification service) | iOS push notifications (when enabled) | Opaque APNs device token |
+| Plaid Inc. | Bank-data network: institution linking and transaction retrieval (finance apps only) | Bank account connection on your behalf; see Plaid's End User Privacy Policy |
+| Supabase, Inc. | Database, authentication, and server functions | All application data |
+| Resend, Inc. | Transactional email (parental-consent verification only, family applications) | Email address |
 
 When a child profile is created in a family application, the parent's
 email is the only identifier we hold for that flow; child first names
@@ -144,11 +144,11 @@ except Supabase (which stores them).
 ## 5. Storage and Security
 
 All application data is stored in Supabase Postgres with row-level
-security policies that isolate each user's records. Bank-aggregator
-access tokens are encrypted with AES-256-GCM before storage; the
-encryption key is held only on the application server and never
-leaves it. All traffic between you, our application, and our
-sub-processors uses TLS 1.2 or higher.
+security policies that isolate each user's records. Plaid access
+tokens are encrypted with AES-256-GCM before storage; the
+encryption key is held only in our server environment and is never
+exposed to applications or users. All traffic between you, our
+services, and our sub-processors uses TLS 1.2 or higher.
 
 We undergo periodic security review and run automated security
 advisor scans against our database schema.
@@ -159,18 +159,19 @@ We retain your data for as long as your account is active. You can
 permanently delete your account from within each application's
 Settings; this:
 
-- Revokes any active bank-aggregator connections (Teller).
-- Deletes all of your transactions, labels, categories, push
-  subscriptions, in-app tip records, and other application data
-  immediately.
+- Removes your bank connections and deletes the associated access
+  tokens from our systems.
+- Deletes all of your transactions, categorization decisions,
+  subscription and tip records, push registrations, and other
+  application data immediately.
 - Removes your authentication record.
 
 After deletion we retain a minimal deletion record — your email and
 the deletion timestamp — as a record that the deletion occurred (for
 fraud-prevention and to honor any re-signup limits). No transaction
-data, labels, or other personal content is retained. COPPA consent
-audit records are retained as required by law in anonymized form (no
-child first name or device identifier).
+data, categorizations, or other personal content is retained. COPPA
+consent audit records are retained as required by law in anonymized
+form (no child first name or device identifier).
 
 If you would like us to delete this minimal record as well, contact
 us — see Section 9.
@@ -181,16 +182,17 @@ You may:
 
 - **Access** all personal information we hold about you by signing
   into the application.
-- **Export** all your data in JSON/CSV from the application's
-  Settings.
+- **Export** your transaction data from the application's Settings.
 - **Correct or update** any information by editing it in the
   application.
 - **Delete** your account and associated data from the application's
   Settings.
 - **Revoke consent** (for parental consent in family apps) and
   request immediate deletion of associated child profiles.
+- **Revoke a sharing grant** you have made to another person's
+  account at any time.
 - **Withdraw push notification consent** from the application's
-  Notifications settings or your device's OS-level settings.
+  settings or your device's OS-level settings.
 
 If you reside in a jurisdiction with additional privacy rights
 (California, the European Union, the United Kingdom, and similar),
@@ -222,10 +224,11 @@ personal information we have collected about you:
 - **Right to limit use of sensitive personal information** —
   financial transaction data is considered sensitive personal
   information under CPRA. We use it only to provide the application
-  features you have signed up for (transaction labeling, exports,
-  retirement-modeling input). We do not use it to infer
-  characteristics about you for any other purpose, and you may
-  request that we further limit its use by emailing us.
+  features you have signed up for (displaying and categorizing your
+  transactions, summaries of your own spending, and exports). We do
+  not use it to infer characteristics about you for any other
+  purpose, and you may request that we further limit its use by
+  emailing us.
 - **Right to non-discrimination** — exercising any of these rights
   will not result in denial of service, different prices, or a
   different level or quality of service.
@@ -255,7 +258,7 @@ comply with the Children's Online Privacy Protection Act (COPPA):
 - A parent can revoke consent at any time.
 
 Finance applications such as Mizu are not directed at children and
-are invite-only for adult users.
+require users to be 18 or older.
 
 ## 9. Contact
 

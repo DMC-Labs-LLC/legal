@@ -1,12 +1,12 @@
 ---
-version: "2026-06-12"
+version: "2026-07-28"
 title: Terms of Service
-last_updated: June 12, 2026
+last_updated: July 28, 2026
 ---
 
 # Terms of Service
 
-Last updated: June 12, 2026
+Last updated: July 28, 2026
 
 ## 1. Agreement to Terms
 
@@ -22,12 +22,7 @@ to personal-finance tools (Mizu), family dashboards (KiddoCash),
 and related services. Our applications are provided for personal,
 non-commercial use unless otherwise specified.
 
-## 3. Eligibility and Access
-
-Some applications are made available on an invite-only basis. We
-reserve the right to grant, refuse, or revoke access at our
-discretion. Use of our applications by an account that has not been
-granted access (or whose access has been revoked) is not permitted.
+## 3. Eligibility
 
 You must be at least 13 years old to create an account on a DMC Labs
 application. Some applications, such as Mizu, are restricted to
@@ -36,12 +31,20 @@ accounts, which require account-holder ages of 18 or above. Child
 profiles within family applications are governed by the
 parental-consent flow described in our Privacy Policy.
 
+Applications may include a demonstration mode with example data.
+Demonstration data is fictional and is provided for evaluation only.
+
 ## 4. User Accounts
 
-Our services authenticate through third-party identity providers
-(such as Google or Apple). You are responsible for maintaining the
+Our services authenticate through Sign in with Apple or an email
+address and password. You are responsible for maintaining the
 security of your account credentials and for all activities that
 occur under your account.
+
+Your DMC Labs account is a single identity across DMC Labs
+applications: signing in to a different DMC Labs application with
+the same account gives that application access to the same data,
+as described in Section 8 and in our Privacy Policy.
 
 ## 5. User Responsibilities
 
@@ -73,49 +76,84 @@ Before any child data is collected, we require verifiable parental
 consent through our email-based verification process. See our
 Privacy Policy for details.
 
-## 7. Device Authorization
-
 Where applicable, access to child or shared dashboards is controlled
 through device authorization. You are responsible for approving or
 denying device access requests. We recommend reviewing authorized
 devices periodically and revoking access for any devices you do not
 recognize.
 
-## 8. Financial Data and AI Categorization
+## 7. Subscriptions
 
-Certain applications connect to your financial accounts through
-regulated third-party aggregators (such as Teller) and assist you
-in labeling and categorizing your transactions, including with the
-help of large language models (such as Microsoft Azure OpenAI).
-You acknowledge that:
+Some applications offer paid subscriptions (for example, "Mizu
+Monthly"). Subscriptions are billed through your Apple ID using
+Apple's In-App Purchase system; we never receive your payment card
+details. The following terms apply:
+
+- Subscriptions renew automatically each billing period until you
+  cancel. You can cancel at any time in your device's App Store
+  subscription settings; cancellation takes effect at the end of
+  the current billing period.
+- Prices are shown in the app before purchase. We may change
+  subscription pricing prospectively; a price change will never
+  apply to an existing billing period, and Apple will notify you
+  and, where required, ask you to consent before a new price takes
+  effect.
+- Refunds are handled by Apple under Apple's media-services terms;
+  we cannot issue refunds directly.
+- We may offer promotional pricing, free periods, or offer codes at
+  our discretion. Promotional terms apply only as described at the
+  time of the offer.
+- In Mizu, an active subscription is required to link financial
+  institutions. If your subscription ends, you retain access to the
+  data already in your account; linking new financial institutions
+  requires an active subscription, and we may suspend continued
+  synchronization of previously linked institutions while your
+  subscription is inactive.
+- Subscriptions are intended for reasonable personal use. We may
+  limit the number of financial institutions or accounts linked
+  under one subscription where usage is far outside typical
+  personal use (as a guideline, more than ten linked accounts).
+
+## 8. Financial Data, Bank Connections, and Sharing
+
+Finance applications (such as Mizu) connect to your financial
+accounts through Plaid Inc. ("Plaid"), a regulated bank-data
+network acting on your behalf. You acknowledge that:
 
 - The connection to your bank is **read-only**. We cannot move
   money, change account settings, or initiate transactions of any
   kind on your behalf.
+- Your bank sign-in happens on Plaid's interface. We never see or
+  store your bank login credentials.
+- By linking a financial institution you also agree to Plaid's
+  [End User Privacy Policy](https://plaid.com/legal/#end-user-privacy-policy),
+  which governs Plaid's handling of your data.
+- Bank connections are made at the level of your DMC Labs account,
+  not an individual application. A financial institution you link
+  is available to other DMC Labs applications you sign in to with
+  the same account. Your data is made available to **another
+  person's** account only if you explicitly grant them access to a
+  specific linked account, and you may revoke such a grant at any
+  time.
+- Transaction categorization is assistive. Suggested categories
+  come from our data provider and from corrections you make; you
+  should review them, and we do not warrant their accuracy.
 - You are solely responsible for the accuracy of any financial
   information shown.
 - DMC Labs is not a financial institution and does not provide
-  financial, legal, tax, or investment advice. Categorizations,
-  insights, and projections are presented for informational
+  financial, legal, tax, or investment advice. All figures,
+  categorizations, and summaries are presented for informational
   purposes only.
-- AI-suggested category labels are best-effort. You should review
-  and confirm them. We do not warrant their accuracy.
-- When connecting bank accounts through a third-party aggregator,
-  you are subject to that aggregator's terms and privacy policy in
-  addition to ours.
-- Transaction descriptions are automatically scanned to redact
-  sensitive identifiers (such as account numbers) before storage
-  and before any AI processing. You should still review uploaded
-  data for accuracy.
 
 ## 9. Data Portability and Deletion
 
 You may export your data or delete your account at any time through
 the application's Settings. Account deletion is permanent and
-removes all transactions, labels, push subscriptions, and bank
-connections within seconds. We retain a minimal deletion record (your
-email and the deletion timestamp) as a record that the deletion
-occurred, for fraud-prevention purposes; see our Privacy Policy for details.
+removes your transactions, categorizations, bank connections, push
+registrations, and other application data. We retain a minimal
+deletion record (your email and the deletion timestamp) as a record
+that the deletion occurred, for fraud-prevention purposes; see our
+Privacy Policy for details.
 
 ## 10. Intellectual Property
 
@@ -151,10 +189,10 @@ a particular purpose, and non-infringement.
 ## 14. Termination
 
 We reserve the right to suspend or terminate your access to our
-services at any time, with or without cause. Upon termination,
-your right to use our services will immediately cease. The
-provisions of these Terms that by their nature should survive
-termination shall do so.
+services at any time, with or without cause, including for use that
+violates these Terms. Upon termination, your right to use our
+services will immediately cease. The provisions of these Terms that
+by their nature should survive termination shall do so.
 
 ## 15. Changes to Terms
 
