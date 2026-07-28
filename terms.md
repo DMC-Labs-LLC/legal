@@ -1,12 +1,12 @@
 ---
-version: "2026-06-12"
+version: "2026-07-28"
 title: Terms of Service
-last_updated: June 12, 2026
+last_updated: July 28, 2026
 ---
 
 # Terms of Service
 
-Last updated: June 12, 2026
+Last updated: July 28, 2026
 
 ## 1. Agreement to Terms
 
@@ -39,9 +39,10 @@ parental-consent flow described in our Privacy Policy.
 ## 4. User Accounts
 
 Our services authenticate through third-party identity providers
-(such as Google or Apple). You are responsible for maintaining the
-security of your account credentials and for all activities that
-occur under your account.
+(such as Apple or Google) and, in some applications, by email and
+password. You are responsible for maintaining the security of your
+account credentials and for all activities that occur under your
+account.
 
 ## 5. User Responsibilities
 
@@ -81,13 +82,12 @@ denying device access requests. We recommend reviewing authorized
 devices periodically and revoking access for any devices you do not
 recognize.
 
-## 8. Financial Data and AI Categorization
+## 8. Financial Data and Categorization
 
 Certain applications connect to your financial accounts through
-regulated third-party aggregators (such as Teller) and assist you
-in labeling and categorizing your transactions, including with the
-help of large language models (such as Microsoft Azure OpenAI).
-You acknowledge that:
+regulated third-party aggregators (such as Plaid) and help you
+review, label, and categorize your transactions. You acknowledge
+that:
 
 - The connection to your bank is **read-only**. We cannot move
   money, change account settings, or initiate transactions of any
@@ -95,36 +95,50 @@ You acknowledge that:
 - You are solely responsible for the accuracy of any financial
   information shown.
 - DMC Labs is not a financial institution and does not provide
-  financial, legal, tax, or investment advice. Categorizations,
-  insights, and projections are presented for informational
-  purposes only.
-- AI-suggested category labels are best-effort. You should review
-  and confirm them. We do not warrant their accuracy.
+  financial, legal, tax, or investment advice. Categorizations and
+  summaries are presented for informational purposes only.
+- Transactions arrive with a suggested category from the aggregator,
+  which you can confirm or correct. Suggested categories are
+  best-effort; you should review them, and we do not warrant their
+  accuracy.
 - When connecting bank accounts through a third-party aggregator,
   you are subject to that aggregator's terms and privacy policy in
   addition to ours.
 - Transaction descriptions are automatically scanned to redact
-  sensitive identifiers (such as account numbers) before storage
-  and before any AI processing. You should still review uploaded
-  data for accuracy.
+  sensitive identifiers (such as account numbers) before storage.
+  You should still review your data for accuracy.
 
-## 9. Data Portability and Deletion
+## 9. Subscriptions
 
-You may export your data or delete your account at any time through
-the application's Settings. Account deletion is permanent and
-removes all transactions, labels, push subscriptions, and bank
-connections within seconds. We retain a minimal deletion record (your
-email and the deletion timestamp) as a record that the deletion
-occurred, for fraud-prevention purposes; see our Privacy Policy for details.
+Some applications, such as Mizu, offer an auto-renewing subscription
+that unlocks features such as connecting your own bank accounts.
 
-## 10. Intellectual Property
+- **Price and period.** The subscription is billed at the price and
+  billing period shown on the purchase screen inside the application
+  (for Mizu, US$1.99 per month). Prices may vary by storefront and
+  are shown in your local currency before you purchase.
+- **Billing through Apple.** Payment is charged to your Apple Account
+  at confirmation of purchase. We never receive your card or payment
+  details; Apple processes all payments.
+- **Automatic renewal.** The subscription automatically renews for
+  the same period unless you turn off auto-renewal at least 24 hours
+  before the end of the current period. Your Apple Account is charged
+  for renewal within 24 hours before the end of the current period.
+- **Managing and cancelling.** You can manage or cancel your
+  subscription, and turn off auto-renewal, at any time in your Apple
+  Account settings (Settings → your name → Subscriptions on iOS).
+  Cancelling stops future renewals; the current paid period continues
+  until it ends.
+- **Refunds.** Payments are handled by Apple and are subject to
+  Apple's refund policies. We do not separately process refunds.
+- **Changes.** If we change the subscription price, we will seek your
+  consent for the new price in accordance with Apple's rules; if you
+  do not agree, the subscription will not renew at the new price.
 
-All content, features, and functionality of our services are owned
-by DMC Labs, LLC and are protected by applicable intellectual
-property laws. You may not copy, modify, or distribute our software
-without our prior written consent.
+Any promotional or introductory offers are described at the point of
+purchase and are subject to their stated terms.
 
-## 11. Voluntary Contributions
+## 10. Voluntary Contributions
 
 Where applications offer a "tip jar" or voluntary contribution
 feature, contributions are made voluntarily, are not refundable,
@@ -132,7 +146,24 @@ and do not entitle you to any product, service, or feature beyond
 what is otherwise made generally available. Contributions are
 non-recurring unless explicitly described as recurring.
 
-## 12. Limitation of Liability
+## 11. Data Portability and Deletion
+
+You may export your data or delete your account at any time through
+the application's Settings. Account deletion is permanent and
+removes all transactions, labels, notification tokens, and bank
+connections within seconds, and disconnects your linked banks at the
+aggregator. We retain a minimal deletion record (your email and the
+deletion timestamp) as a record that the deletion occurred, for
+fraud-prevention purposes; see our Privacy Policy for details.
+
+## 12. Intellectual Property
+
+All content, features, and functionality of our services are owned
+by DMC Labs, LLC and are protected by applicable intellectual
+property laws. You may not copy, modify, or distribute our software
+without our prior written consent.
+
+## 13. Limitation of Liability
 
 To the fullest extent permitted by law, DMC Labs, LLC shall not be
 liable for any indirect, incidental, special, consequential, or
@@ -141,14 +172,14 @@ liability shall not exceed the amount you have paid us in the
 twelve months preceding the claim, or one hundred US dollars,
 whichever is greater.
 
-## 13. Disclaimer of Warranties
+## 14. Disclaimer of Warranties
 
 Our services are provided "as is" and "as available" without
 warranties of any kind, either express or implied, including but
 not limited to implied warranties of merchantability, fitness for
 a particular purpose, and non-infringement.
 
-## 14. Termination
+## 15. Termination
 
 We reserve the right to suspend or terminate your access to our
 services at any time, with or without cause. Upon termination,
@@ -156,7 +187,7 @@ your right to use our services will immediately cease. The
 provisions of these Terms that by their nature should survive
 termination shall do so.
 
-## 15. Changes to Terms
+## 16. Changes to Terms
 
 We may update these Terms from time to time. We will notify users
 of material changes by updating the "Last updated" date and the
@@ -164,7 +195,7 @@ version, and by requiring re-acceptance within our applications.
 Continued use of our services after changes constitutes acceptance
 of the revised terms.
 
-## 16. Governing Law
+## 17. Governing Law
 
 These Terms shall be governed by and construed in accordance with
 the laws of the State of Florida, without regard to its conflict of
@@ -172,7 +203,7 @@ law provisions. The exclusive venue for any dispute arising from
 these Terms or our services shall be the state or federal courts
 located in the State of Florida.
 
-## 17. Contact
+## 18. Contact
 
 If you have questions about these Terms of Service, please reach
 us at **legal@dmclabs.one** or via
