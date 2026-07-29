@@ -19,3 +19,7 @@ exclude:
   - README.md
   - LICENSE
   - .gitignore
+
+# Serve Apple app-site-association (Plaid OAuth universal link).
+include:
+  - ".well-known"
