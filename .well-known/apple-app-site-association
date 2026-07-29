@@ -1,0 +1,19 @@
+{
+  "applinks": {
+    "apps": [],
+    "details": [
+      {
+        "appID": "X72H327U5N.one.dmclabs.mizu",
+        "paths": [
+          "/mizu/oauth"
+        ]
+      },
+      {
+        "appID": "X72H327U5N.one.dmclabs.mizu.arm",
+        "paths": [
+          "/mizu/oauth"
+        ]
+      }
+    ]
+  }
+}
