@@ -7,7 +7,7 @@ permalink: /mizu/privacy
 
 # Mizu — Privacy Policy
 
-Last updated: July 28, 2026
+Last updated: August 12, 2026
 
 ## 1. Who We Are
 
@@ -29,18 +29,25 @@ Apple password.
 ### 2.2 Financial transaction data
 
 We receive transaction data from your bank through Plaid, a regulated
-bank-data aggregator acting on your behalf. We receive: account name,
-account type, the last four digits of the account number, individual
-transaction date, amount, merchant description, and posting metadata.
-We do **not** receive your bank login credentials at any time. We do
-**not** have the ability to move money — the connection is read-only.
+bank-data aggregator acting on your behalf. Each transaction record
+may include: the account name, account type, and last four digits of
+the account number; the transaction date, time, amount, and posting
+status; merchant details as provided by Plaid, such as the merchant's
+name, category, logo, website, and location; and payment details such
+as check number, payee, and reference metadata. We store the
+transaction record as Plaid provides it so that, when a charge is
+unclear, Mizu can show you as much context about it as we have —
+rather than leaving you to call your bank. We do **not** receive your
+bank login credentials at any time. We do **not** have the ability to
+move money — the connection is read-only.
 
 Transaction descriptions are passed through an automatic redactor
-that strips account-number and card-number fragments, Social Security
-numbers, and similar sensitive sub-strings before the description is
-stored. The redacted form is what you see in the app. (An account may
-be configured to retain the full, un-redacted description for your
-own record-keeping; this is off by default.)
+designed to catch sensitive fragments that banks sometimes embed in
+description text: full account and card numbers are masked down to
+their last four digits, and Social-Security-number patterns are
+removed, before the description is stored. The redactor is
+pattern-based and may not recognize every format a bank uses; the
+redacted form is what Mizu stores and shows.
 
 ### 2.3 Categorization data
 
